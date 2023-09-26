@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_background">
+
+        <RelativeLayout
+            android:id="@+id/rl_dashboard_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_header"
+            android:paddingLeft="@dimen/margin_twenty_four"
+            android:paddingRight="@dimen/margin_twenty_four"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/ll_headerBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_fifty"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/margin_five"
+                android:paddingBottom="@dimen/margin_five">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_titleHeader"
+                    style="@style/textView"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/txt_welcome"
+                    android:textSize="@dimen/text_size_twelve"
+                    android:layout_width="0dp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ig_hamburger" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_titleSavingAmount"
+                style="@style/textView"
+                android:layout_below="@id/ll_headerBar"
+                android:layout_marginTop="@dimen/margin_thirty"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/txt_your_savings_amount" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_savingAmount"
+                style="@style/textView"
+                android:layout_below="@id/tv_titleSavingAmount"
+                android:text="@string/txt_saving_amount"
+                android:textSize="@dimen/text_size_forty" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_profitPercent"
+                style="@style/textView"
+                android:layout_below="@id/tv_titleSavingAmount"
+                android:layout_marginStart="@dimen/margin_five"
+                android:layout_marginTop="@dimen/margin_forty"
+                android:layout_toEndOf="@id/tv_savingAmount"
+                android:text="@string/txt_percent"
+                android:textColor="@color/green" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_titleInvestments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_twenty_four"
+            android:layout_marginTop="@dimen/margin_thirty"
+            android:layout_marginEnd="@dimen/margin_twenty_four"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/rl_dashboard_header">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_titleInvestment"
+                style="@style/textView"
+                android:layout_weight="1"
+                android:text="@string/txt_investments"
+                android:textSize="@dimen/text_size_twenty"
+                android:layout_width="0dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ig_notice" />
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_twenty_four"
+            android:layout_marginTop="@dimen/margin_twelve"
+            android:layout_marginEnd="@dimen/margin_twenty_four"
+            app:cardBackgroundColor="@color/card1"
+            app:cardCornerRadius="@dimen/margin_five"
+            app:contentPadding="@dimen/margin_fifteen"
+            app:layout_constraintTop_toBottomOf="@id/ll_titleInvestments">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_titleLoriemIpsem"
+                    style="@style/textView"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/txt_title_loriem_ipsem"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_sixteen" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_textLoriemIpsem"
+                    style="@style/textView"
+                    android:layout_below="@id/tv_titleLoriemIpsem"
+                    android:layout_marginTop="@dimen/margin_five"
+                    android:layout_toStartOf="@id/iv_coinStack"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/txt_loriem_ipsem"
+                    android:textColor="@color/black" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_LoriemIpsemAmount"
+                    style="@style/textView"
+                    android:layout_below="@id/tv_textLoriemIpsem"
+                    android:layout_marginTop="@dimen/margin_fifteen"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/txt_card1_amount"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_twenty" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_coinStack"
+                    android:layout_width="@dimen/margin_seventy_two"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/tv_LoriemIpsemAmount"
+                    android:layout_alignParentEnd="true"
+                    app:srcCompat="@drawable/ig_coin_stack" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_arrow1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_coinStack"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/margin_fifteen"
+                    app:srcCompat="@drawable/ig_arrow_right" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_twenty_four"
+            android:layout_marginTop="@dimen/margin_twenty_four"
+            android:layout_marginEnd="@dimen/margin_twenty_four"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/cv_first">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_second"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/margin_twelve"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/card2"
+                app:cardCornerRadius="@dimen/margin_five"
+                app:contentPadding="@dimen/margin_fifteen">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_titleLoriemIpsemNol"
+                        style="@style/textView"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/txt_title_loriem_ipsem_nol"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_sixteen"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_textLoriemIpsemNol"
+                        style="@style/textView"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/txt_loriem_ipsem_nol"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_titleLoriemIpsemNol" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_LoriemIpsemNolAmount"
+                        style="@style/textView"
+                        android:layout_marginTop="@dimen/margin_fifteen"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/txt_card1_amount"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_twenty"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_textLoriemIpsemNol" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_coinCrash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ig_coin_crash" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_arrow2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_fifteen"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:srcCompat="@drawable/ig_arrow_right" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_third"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin_twelve"
+                android:layout_weight="1.5"
+                app:cardBackgroundColor="@color/card3"
+                app:cardCornerRadius="@dimen/margin_five"
+                app:contentPadding="@dimen/margin_fifteen">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_titleLoriemIpsem2"
+                        style="@style/textView"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/txt_title_loriem_ipsem"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_sixteen"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_textLoriemIpsem2"
+                        style="@style/textView"
+                        android:layout_marginTop="@dimen/margin_five"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/txt_loriem_ipsem_2"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_titleLoriemIpsem2" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_LoriemIpsemAmount2"
+                        style="@style/textView"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/txt_card1_amount"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_twenty"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_arrow3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:srcCompat="@drawable/ig_arrow_right" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_Footer_notice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/textView"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/margin_forty"
+                android:layout_marginTop="@dimen/margin_twenty_four"
+                android:layout_marginEnd="@dimen/margin_twenty_four"
+                android:layout_marginBottom="@dimen/margin_twenty_four"
+                android:gravity="center"
+                android:text="@string/text_notice" />
+
+        </RelativeLayout>
+
+        <Space
+            android:id="@+id/space"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_twenty_four"
+            android:layout_marginTop="@dimen/margin_twelve"
+            app:layout_constraintEnd_toEndOf="@+id/rl_Footer_notice"
+            app:layout_constraintTop_toTopOf="@+id/rl_Footer_notice" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_twenty_four"
+            app:layout_constraintBottom_toTopOf="@+id/space"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ig_notify" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

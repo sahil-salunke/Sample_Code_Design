@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Copods Design Assignment</string>
+
+
+    <string name="txt_welcome">Welcome, Riann</string>
+    <string name="txt_dashboard_fragment">Dashboard Fragment</string>
+    <string name="txt_your_savings_amount">Your Savings Amount</string>
+    <string name="txt_investments">Investments</string>
+
+    <string name="txt_saving_amount">₹2798.16</string>
+    <string name="txt_percent">+ 18.74%</string>
+    <string name="txt_title_loriem_ipsem">Loriem Ipsem</string>
+    <string name="txt_loriem_ipsem">Accumulating everyday changes can make a huge difference</string>
+    <string name="txt_card1_amount">₹2116</string>
+    <string name="txt_title_loriem_ipsem_nol">Loriem Ipsem \nnol</string>
+    <string name="txt_loriem_ipsem_nol">You have it! Save it \n before it vanishes.</string>
+    <string name="txt_card2_amount">₹500</string>
+    <string name="txt_loriem_ipsem_2">Save and grow \neveryday.</string>
+    <string name="txt_card3_amount">₹0</string>
+    <string name="text_notice">We recommend you to <b>Complete Your KYC</b> at the earliest to take control of your wealth</string>
+
+</resources>

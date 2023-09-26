@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- default margin dimens values -->
+
+    <dimen name="margin_five">5dp</dimen>
+    <dimen name="margin_ten">10dp</dimen>
+    <dimen name="margin_twelve">12dp</dimen>
+    <dimen name="margin_fifteen">15dp</dimen>
+    <dimen name="margin_twenty_four">24dp</dimen>
+    <dimen name="margin_thirty">30dp</dimen>
+    <dimen name="margin_thirty_two">32dp</dimen>
+    <dimen name="margin_forty">40dp</dimen>
+    <dimen name="margin_fifty">50dp</dimen>
+    <dimen name="margin_seventy_two">72dp</dimen>
+
+    <dimen name="text_size_twelve">12sp</dimen>
+    <dimen name="text_size_sixteen">16sp</dimen>
+    <dimen name="text_size_twenty">20sp</dimen>
+    <dimen name="text_size_forty">50sp</dimen>
+
+</resources>
